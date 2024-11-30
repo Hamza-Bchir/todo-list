@@ -1,0 +1,18 @@
+<div class="head-bar d-flex justify-content-between align-items-center p-3" style="background-color: hotpink;">
+    <h1 class="text-white">My Todo List</h1>
+    <div>
+      <a routerLink="/todos" class="btn btn-dark me-2">Todos</a>
+      <a routerLink="/new" class="btn btn-dark me-2" (click)="openAddTodoModal()">New</a>
+      <button class="btn btn-dark" *ngIf="!authService.isAuthenticated()" routerLink="/todo-reactive-form">Sign In</button>
+      <button class="btn btn-dark" *ngIf="authService.isAuthenticated()" (click)="authService.logout()">Sign Out</button>
+
+    </div>
+  </div>
+
+
+<app-todo-template-driven-form
+  [show]="showAddModal"
+  (close)="closeAddTodoModal()"
+  (added)="onTodoAdded($event)">
+</app-todo-template-driven-form>
+  

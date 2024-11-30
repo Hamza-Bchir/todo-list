@@ -1,0 +1,26 @@
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': show}" [ngStyle]="{'display': show ? 'block' : 'none'}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Task details</h5>
+          <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>{{ todo?.title }} <span [class.text-success]="todo?.done" [class.text-danger]="!todo?.done">
+            ({{ todo?.done ? 'Done' : 'Not Done' }})
+          </span></h6>
+          <p>{{ todo?.date | date:'fullDate' }}</p>
+          <p>{{ todo?.description }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="updateTodo()">
+            <fa-icon [icon]="faCheck"></fa-icon> Mark as {{ todo?.done ? 'Not Done' : 'Done' }}
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Acheter des courses",
+      "description": "Acheter du lait, du pain, du fromage, des œufs, et des fruits.",
+      "done": false,
+      "date": "2024-12-01T10:00:00"
+    },
+    {
+      "id": "2",
+      "title": "Terminer le devoir Angular",
+      "description": "Finaliser le tutoriel Angular et compléter les exercices pratiques.",
+      "done": true,
+      "date": "2024-11-29T14:00:00"
+    },
+    {
+      "id": "3",
+      "title": "Nettoyer la maison",
+      "description": "Passer l'aspirateur, faire la poussière et organiser le salon et la cuisine.",
+      "done": true,
+      "date": "2024-11-30T08:30:00"
+    },
+    {
+      "id": "4",
+      "title": "Préparer une présentation",
+      "description": "Créer les diapositives pour la réunion de lundi.",
+      "done": false,
+      "date": "2024-12-02T15:00:00"
+    },
+    {
+      "id": "92af",
+      "title": "Faire le TP5",
+      "description": "Faire le TP 4 Angular pour le samedi",
+      "date": "2024-11-30",
+      "done": false
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "login": "mail@gmail.com",
+      "password": "bingo",
+      "token": "ffo33dde"
+    },
+    {
+      "id": 2,
+      "login": "user2@example.com",
+      "password": "123456",
+      "token": "abc123xyz"
+    }
+  ]
+}
