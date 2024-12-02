@@ -41,6 +41,10 @@ export class TodoReactiveFormComponent {
   }
 
   isAuthenticated(): boolean {
-    return this.authService.isAuthenticated();
+    if (typeof localStorage !== 'undefined') {
+      return !!localStorage.getItem('token');
+    }
+    return false;
   }
+  
 }
